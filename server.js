@@ -5,7 +5,7 @@ let bodyParser = require('body-parser');
 let sanitizeHtml = require('sanitize-html')
 
 let app = express()
-let connectionString = '{mongodb.collection.url}'
+let connectionString = process.env.URI
 let db
 let port = process.env.PORT
 if(port == null || port == ""){
